@@ -1,17 +1,4 @@
 
-Conversation opened. 1 unread message.
-
-Skip to content
-Using Trinity Alps Unified School District Mail with screen readers
-
-1 of 523
-(no subject)
-Inbox
-
-Brodie Brower <35135@tausd.org>
-9:20 AM (2 hours ago)
-to me
-
 console.log('Script Starting...')
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
@@ -94,3 +81,4 @@ function drawLoop(){
 }
 
 drawLoop();
+
