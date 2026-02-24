@@ -8,11 +8,11 @@ document.addEventListener('keydown', handleKeyPress);
 function handleKeyPress(e){
     console.log(e.key);
 
-    if (e.key == 'a'){
+    if (e.key == 'ArrowLeft'){
         //move left
         paddle.x -= paddle.hspeed;
     }
-    else if (e.key == 'd'){
+    else if (e.key == 'ArrowRight'){
         //move right
         paddle.x += paddle.hspeed;
     }
@@ -78,5 +78,6 @@ function drawLoop(){
     //call drawLoop
     requestAnimationFrame(drawLoop);
 }
+
 
 drawLoop();
