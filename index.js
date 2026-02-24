@@ -74,11 +74,12 @@ function drawLoop(){
 
     //draw objects
     drawCircle(circle.x, circle.y, circle.radius, circle.fill, circle.stroke);
-    drawRectObj(paddle);
+    //drawRectObj(paddle);
     //call drawLoop
     requestAnimationFrame(drawLoop);
 }
 
 
 drawLoop();
+
 
