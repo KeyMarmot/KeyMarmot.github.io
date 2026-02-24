@@ -45,7 +45,7 @@ const paddle =  {
     width: 128,
     height: 32,
     hspeed: 8,
-    color: 'red'
+    color: 'black'
 }
 
 function moveWithBounce(circle){
@@ -81,3 +81,4 @@ function drawLoop(){
 
 
 drawLoop();
+
