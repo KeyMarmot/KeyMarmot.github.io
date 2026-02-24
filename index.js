@@ -49,6 +49,10 @@ function moveWithBounce(circle){
     circle.x += circle.hspeed;
     circle.y += circle.vspeed;
 
+    if (circle.hspeed > 10){
+        circle.haccelerate *= -1;
+    }
+
     if (circle.x-circle.radius < 0 || circle.x+circle.radius > canvas.width){
         circle.hspeed *= -1;
     }
@@ -56,11 +60,6 @@ function moveWithBounce(circle){
     if (circle.x-circle.radius < 0 || circle.x+circle.radius > canvas.width){
         circle.haccelerate *= -1;
     }
-
-    if (circle.y-circle.radius < 0 || circle.y+circle.radius > canvas.height){
-        circle.vaccelerate *= -1;
-    }
-
 
     if (circle.y-circle.radius < 0 || circle.y+circle.radius > canvas.height){
         circle.vspeed *= -1;
@@ -81,4 +80,5 @@ function drawLoop(){
 }
 
 drawLoop();
+
 
