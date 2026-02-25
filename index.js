@@ -52,15 +52,15 @@ function moveWithBounce(circle){
         circle.haccelerate == 0 ;
     }
 
-    if (circle.x-circle.radius < 0 || circle.x+circle.radius > canvas.width){
+    if (circle.x-circle.radius <= 0 || circle.x+circle.radius <= canvas.width){
         circle.hspeed *= -.9;
     }
 
-    if (circle.x-circle.radius < 0 || circle.x+circle.radius > canvas.width){
+    if (circle.x-circle.radius >= 0 || circle.x+circle.radius >= canvas.width){
         circle.haccelerate *= -1;
     }
 
-    if (circle.y-circle.radius < 0 || circle.y+circle.radius > canvas.height){
+    if (circle.y-circle.radius <= 0 || circle.y+circle.radius >= canvas.height){
         circle.vspeed *= -.9;
     }
 
@@ -79,6 +79,7 @@ function drawLoop(){
 }
 
 drawLoop();
+
 
 
 
