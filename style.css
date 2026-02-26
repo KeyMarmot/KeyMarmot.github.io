@@ -4,5 +4,5 @@
 
 #inputs {
     display: flex;
-    align: after-start;
+    align-items: start;
 }
