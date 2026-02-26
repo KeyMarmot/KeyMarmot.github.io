@@ -44,6 +44,7 @@ const circle = {
 
 
 function moveWithBounce(circle){
+    console.log(circle.hspeed)
     circle.vspeed += circle.vaccelerate
     circle.x += circle.hspeed;
     circle.y += circle.vspeed;
@@ -79,6 +80,7 @@ function drawLoop(){
 }
 
 drawLoop();
+
 
 
 
