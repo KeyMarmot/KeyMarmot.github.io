@@ -5,4 +5,5 @@
 #inputs {
     display: flex;
     align-items: start;
+    justify-content: start;
 }
