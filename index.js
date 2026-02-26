@@ -51,7 +51,7 @@ function moveWithBounce(circle){
     circle.y += circle.vspeed;
 
     if (circle.hspeed >= 5 || circle.hspeed <= -5){
-        circle.haccelerate == 0;
+        circle.haccelerate = 0;
     }
 
     if (circle.x-circle.radius <= 0 || circle.x+circle.radius >= canvas.width){
@@ -81,6 +81,7 @@ function drawLoop(){
 }
 
 drawLoop();
+
 
 
 
