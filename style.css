@@ -2,8 +2,15 @@
     background-color: black;
 }
 
+body {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+}
+
 #inputs {
     display: flex;
-    align-items: start;
-    justify-content: start;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-bottom: 50;
 }
