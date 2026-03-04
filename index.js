@@ -13,6 +13,10 @@ const startPosx = document.getElementById('startingPosx');
 const startPosy = document.getElementById('startingPosy')
 let FrameCount = 1;
 
+document.addEventListener('keydown', changeAttributes);
+    if (changeAttributes.key === 'Enter'){
+        changeAttributes.preventDefault();
+    }
 document.addEventListener('keydown', handleKeyPress);
 
 function handleKeyPress(e){
@@ -116,6 +120,7 @@ function drawLoop(){
 Changer.onclick = () => changeAttributes(circle);
 
 drawLoop();
+
 
 
 
