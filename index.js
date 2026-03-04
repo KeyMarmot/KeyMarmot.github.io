@@ -67,13 +67,37 @@ function changeAttributes(circle){
     //stop animation
     //append new properties
     circle.vaccelerate = Number(vAccel.value);
+    if (vAccel.value == ""){
+        circle.vaccelerate = 1;
+    }
     circle.vspeed = Number(vspeed.value);
+    if (vspeed.value == ""){
+        circle.vspeed = 1;
+    }
     circle.hspeed = Number(hspeed.value);
+    if (hspeed.value == ""){
+        circle.hspeed = 1;
+    }
     circle.radius = Number(size.value);
+    if (size.value == ""){
+        circle.radius = 16;
+    }
     circle.x = Number(startPosx.value);
+    if (startPosx.value == ""){
+        circle.x = 32;
+    }
     circle.y = Number(startPosy.value);
+    if (startPosy.value == ""){
+        circle.y = 32;
+    }
     circle.haccelerate = Number(hAccel.value);
+    if (hAccel.value == ""){
+        circle.haccelerate = .25;
+    }
     circle.fill = color.value;
+    if (color.value == ""){
+        circle.fill = 'green';
+    }
     console.log(circle)
     //continue 
 }
@@ -92,6 +116,7 @@ function drawLoop(){
 Changer.onclick = () => changeAttributes(circle);
 
 drawLoop();
+
 
 
 
