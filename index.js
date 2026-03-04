@@ -15,7 +15,7 @@ let FrameCount = 1;
 
 document.addEventListener('keydown', changeAttributes);
     if (changeAttributes.key === 'Enter'){
-        changeAttributes.preventDefault();
+        changeAttributes;
     }
 document.addEventListener('keydown', handleKeyPress);
 
@@ -120,6 +120,7 @@ function drawLoop(){
 Changer.onclick = () => changeAttributes(circle);
 
 drawLoop();
+
 
 
 
