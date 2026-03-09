@@ -53,6 +53,13 @@ function moveWithBounce(circle){
     circle.x += circle.hspeed;
     circle.y += circle.vspeed;
 
+    if (circle.y-circle.radius < 0){
+        circle.y = 0;
+    }
+
+    if (circle.y-circle.radius > canvas.height){
+        circle.y = canvas.height;
+    }
     if (circle.hspeed >= 5 || circle.hspeed <= -5){
         circle.haccelerate = 0;
     }
@@ -123,6 +130,7 @@ function drawLoop(){
 Changer.onclick = () => changeAttributes(circle);
 
 drawLoop();
+
 
 
 
