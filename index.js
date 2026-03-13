@@ -10,8 +10,8 @@ const vspeed = document.getElementById('vSpeed');
 const color = document.getElementById('color');
 const size = document.getElementById('size');
 const startPosx = document.getElementById('startingPosx');
-const startPosy = document.getElementById('startingPosy')
-let FrameCount = 1;
+const startPosy = document.getElementById('startingPosy');
+const elasticity = document.getElementById('Elasticity');
 
 
 document.addEventListener('keydown', (changeAttributes) => {
@@ -42,7 +42,8 @@ let circle = {
     vaccelerate: 1,
     hspeed: 1,
     vspeed: 1,
-    fill: 'green'
+    fill: 'green',
+    Elasticity: .94
 }
 
 
@@ -54,26 +55,29 @@ function moveWithBounce(circle){
     circle.y += circle.vspeed;
 
     if (circle.y-circle.radius < 0){
-        circle.y = 0;
+        circle.y = circle.radius;
+        circle.vspeed *= circle.Elasticity*-1;
     }
 
     if (circle.y-circle.radius > canvas.height){
-        circle.y = canvas.height;
+        circle.y = canvas.height-circle.radius;
+        circle.vspeed *= circle.Elasticity*-1;
     }
+
     if (circle.hspeed >= 5 || circle.hspeed <= -5){
         circle.haccelerate = 0;
     }
 
-    if (circle.x-circle.radius < 0 || circle.x+circle.radius > canvas.width){
-        circle.hspeed *= -1;
+    if (circle.x-circle.radius < 0){
+        circle.x = circle.radius;
+        circle.hspeed *= circle.Elasticity*-1;
+        circle.haccelerate *=-1;
     }
 
-    if (circle.x-circle.radius < 0 || circle.x+circle.radius > canvas.width){
+    if (circle.x+circle.radius > canvas.width){
+        circle.x = canvas.width-circle.radius;
+        circle.hspeed *= circle.Elasticity*-1;
         circle.haccelerate *= -1;
-    }
-
-    if (circle.y-circle.radius < 0 || circle.y+circle.radius > canvas.height){
-        circle.vspeed *= -1;
     }
 }
 
@@ -112,6 +116,11 @@ function changeAttributes(circle){
     if (color.value == ""){
         circle.fill = 'green';
     }
+    circle.Elasticity = Elasticity.value;
+    if (Elasticity.value == ''){
+        circle.Elasticity = .94;
+    }
+
     console.log(circle)
     //continue 
 }
@@ -130,7 +139,6 @@ function drawLoop(){
 Changer.onclick = () => changeAttributes(circle);
 
 drawLoop();
-
 
 
 
