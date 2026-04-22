@@ -1,9 +1,8 @@
 #canvas {
     border: solid, 3px, black;
     width: 98vw;
-    height: 97vh;
+    height: 96vh;
     background-color: black;
-    border-opacity: 1.0;
     opacity: .1;
 }
 
