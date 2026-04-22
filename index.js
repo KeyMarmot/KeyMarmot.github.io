@@ -12,10 +12,12 @@ var sampleRect = {
   d: 10,
   hor: 0,
   vert: 0,
+  color: "blue",
 }
 
 function drawCube(mol) = {
-  ctx drawrect (mol.x, mol.y, mol.w, mol.h)
+  ctx fillStyle = mol.color;
+  ctx fillRect (mol.x, mol.y, mol.w, mol.h);
 }
 
 drawCube(sampleRect)
