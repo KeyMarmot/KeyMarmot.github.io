@@ -2,8 +2,7 @@
     border: solid, 3px, black;
     width: 98vw;
     height: 96vh;
-    background-color: black;
-    opacity: .1;
+    background-color: lightgray;
 }
 
 body {
