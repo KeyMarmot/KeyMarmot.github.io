@@ -1,16 +1,9 @@
 #canvas {
-    background-color: black;
+    border: solid, 3px, black;
 }
 
 body {
     display: flex;
     align-items: flex-start;
     flex-direction: row;
-}
-
-#inputs {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    padding-bottom: 50;
 }
