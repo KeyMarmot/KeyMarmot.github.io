@@ -57,7 +57,10 @@ const camera = {
 
 function drawCube(mol) {
   ctx.fillStyle = mol.color;
-  mol.x = 
+  ctx.beginPath();       // Start a new path
+  ctx.moveTo(p1.x * 50, p1.y * 50);    // Starting point (x=50, y=50)
+  ctx.lineTo(p2.x * 50, p2.x * 50);  // Ending point (x=200, y=150)
+  ctx.stroke();          // Render the line
   ctx.fillRect (mol.x, mol.y, mol.w, mol.h);
 }
 
