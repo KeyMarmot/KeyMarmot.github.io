@@ -1,5 +1,9 @@
 #canvas {
     border: solid, 3px, black;
+    width: 98vw;
+    height: 98vh;
+    background-color: black;
+    opacity: .2;
 }
 
 body {
