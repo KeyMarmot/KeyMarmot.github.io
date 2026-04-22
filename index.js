@@ -16,8 +16,8 @@ var sampleRect = {
 }
 
 function drawCube(mol) = {
-  ctx fillStyle = mol.color;
-  ctx fillRect (mol.x, mol.y, mol.w, mol.h);
+  ctx.fillStyle = mol.color;
+  ctx.fillRect (mol.x, mol.y, mol.w, mol.h);
 }
 
 drawCube(sampleRect)
