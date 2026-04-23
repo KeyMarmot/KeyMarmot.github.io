@@ -69,6 +69,7 @@ function drawWireFrame(mol) {
   ctx.fillStyle = mol.color;
   ctx.fillRect (mol.p3.x, mol.p3.y, mol.p1.x-mol.p3.x , mol.p1.y-mol.p3.y);
 
+  ctx.fillStyle = "red";
   ctx.beginPath();
   ctx.arc(mol.p1.x, mol.p1.y, 3, 0, 2 * Math.PI);
   ctx.fill();
