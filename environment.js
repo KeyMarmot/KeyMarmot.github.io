@@ -10,39 +10,39 @@ var sampleRect = {
     z:1,
   },
   p2:{
-    x:0,
+    x:.1,
     y:1,
     z:1,
   },
   p3:{
-    x:0,
-    y:0,
+    x:.1,
+    y:.1,
     z:1,
   },
   p4:{
-    x:0,
+    x:.1,
     y:1,
-    z:0,
+    z:.1,
   },
   p5:{
-    x:0,
-    y:0,
-    z:0,
+    x:.1,
+    y:.1,
+    z:.1,
   },
   p6:{
     x:1,
-    y:0,
+    y:.1,
     z:1,
   },
   p7:{
     x:1,
-    y:0,
-    z:0,
+    y:.1,
+    z:.1,
   },
   p8:{
     x:1,
     y:1,
-    z:0,
+    z:.1,
   },
   color: "blue",
 }
@@ -55,13 +55,13 @@ const camera = {
   vert:0,
 }
 
-function drawCube(mol) {
+function drawWireFrame(mol) {
   ctx.fillStyle = mol.color;
   ctx.beginPath();       // Start a new path
   ctx.moveTo(mol.p1.x * 50, mol.p1.y * 50);    // Starting point (x=50, y=50)
-  ctx.lineTo(mol.p2.x * 50, mol.p3.x * 50);  // Ending point (x=200, y=150)
+  ctx.lineTo(mol.p2.x * 50, mol.p2.x * 50);  // Ending point (x=200, y=150)
   ctx.stroke();          // Render the line
   ctx.fillRect (mol.x, mol.y, mol.w, mol.h);
 }
 
-drawCube(sampleRect)
+drawWireFrame(sampleRect)
