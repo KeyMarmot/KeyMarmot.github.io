@@ -74,7 +74,7 @@ function drawWireFrame(mol) {
   ctx.arc(mol.p2.x, mol.p2.y, 3, 0, 2 * Math.PI);
   ctx.arc(mol.p3.x, mol.p3.y, 3, 0, 2 * Math.PI);
   ctx.arc(mol.p6.x, mol.p6.y, 3, 0, 2 * Math.PI);
-  ctx.fillStyle = 'grey';
+  ctx.fillStyle = 'green';
   ctx.fill();
 }
 
