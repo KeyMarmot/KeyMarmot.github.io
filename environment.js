@@ -5,44 +5,44 @@ const ctx = canvas.getContext('2d');
 
 var sampleRect = {
   p1 :{
-    x:1,
-    y:1,
-    z:1,
+    x:50,
+    y:50,
+    z:50,
   },
   p2:{
-    x:.1,
-    y:1,
-    z:1,
+    x:5,
+    y:50,
+    z:50,
   },
   p3:{
-    x:.1,
-    y:.1,
-    z:1,
+    x:5,
+    y:5,
+    z:50,
   },
   p4:{
-    x:.1,
-    y:1,
-    z:.1,
+    x:5,
+    y:50,
+    z:5,
   },
   p5:{
-    x:.1,
-    y:.1,
-    z:.1,
+    x:5,
+    y:5,
+    z:5,
   },
   p6:{
-    x:1,
-    y:.1,
-    z:1,
+    x:50,
+    y:5,
+    z:50,
   },
   p7:{
-    x:1,
-    y:.1,
-    z:.1,
+    x:50,
+    y:5,
+    z:5,
   },
   p8:{
-    x:1,
-    y:1,
-    z:.1,
+    x:50,
+    y:50,
+    z:5,
   },
   color: "blue",
 }
@@ -58,14 +58,14 @@ const camera = {
 function drawWireFrame(mol) {
   ctx.fillStyle = mol.color;
   ctx.beginPath();       // Start a new path
-  ctx.moveTo(mol.p1.x * 50, mol.p1.y * 50);    // Starting point 
-  ctx.lineTo(mol.p2.x * 50, mol.p2.y * 50);  // Ending point
-  ctx.lineTo(mol.p3.x *50 , mol.p3.y * 50);
-  ctx.lineTo(mol.p6.x * 50, mol.p6.y * 50);
-  ctx.lineTo(mol.p1.x * 50, mol.p1.y * 50);
+  ctx.moveTo(mol.p1.x , mol.p1.y );    // Starting point 
+  ctx.lineTo(mol.p2.x , mol.p2.y );  // Ending point
+  ctx.lineTo(mol.p3.x , mol.p3.y );
+  ctx.lineTo(mol.p6.x , mol.p6.y );
+  ctx.lineTo(mol.p1.x , mol.p1.y );
   ctx.stroke();          // Render the line
 
-  ctx.fillRect (mol.p3.x, mol.p3.y, 50, 50);
+  ctx.fillRect (mol.p3.x, mol.p3.y, mol.p1.x-mol.p3.x , mol.p1.y-mol.p3.y);
 }
 
 drawWireFrame(sampleRect)
