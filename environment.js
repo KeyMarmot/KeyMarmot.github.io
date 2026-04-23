@@ -7,42 +7,42 @@ var sampleRect = {
   p1 :{
     x:50,
     y:50,
-    z:50,
+    z:5,
   },
   p2:{
     x:5,
     y:50,
-    z:50,
+    z:5,
   },
   p3:{
     x:5,
     y:5,
-    z:50,
+    z:5,
   },
   p4:{
     x:5,
     y:50,
-    z:5,
+    z:50,
   },
   p5:{
     x:5,
     y:5,
-    z:5,
+    z:50,
   },
   p6:{
     x:50,
     y:5,
-    z:50,
+    z:5,
   },
   p7:{
     x:50,
     y:5,
-    z:5,
+    z:50,
   },
   p8:{
     x:50,
     y:50,
-    z:5,
+    z:50,
   },
   color: "blue",
 }
@@ -64,6 +64,10 @@ function drawWireFrame(mol) {
   ctx.lineTo(mol.p6.x , mol.p6.y );
   ctx.lineTo(mol.p1.x , mol.p1.y );
   ctx.stroke();          // Render the line
+
+  ctx.beginPath();
+  ctx.arc(mol.p1.x, mol.p1.y, 3, 0, 2 * Math.PI);
+  ctx.stroke();
 
   ctx.fillRect (mol.p3.x, mol.p3.y, mol.p1.x-mol.p3.x , mol.p1.y-mol.p3.y);
 }
