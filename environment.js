@@ -68,14 +68,14 @@ function drawWireFrame(mol) {
 
   ctx.fillStyle = mol.color;
   ctx.fillRect (mol.p3.x, mol.p3.y, mol.p1.x-mol.p3.x , mol.p1.y-mol.p3.y);
-/*
+
   ctx.beginPath();
   ctx.arc(mol.p1.x, mol.p1.y, 3, 0, 2 * Math.PI);
   ctx.arc(mol.p2.x, mol.p2.y, 3, 0, 2 * Math.PI);
   ctx.arc(mol.p3.x, mol.p3.y, 3, 0, 2 * Math.PI);
   ctx.arc(mol.p6.x, mol.p6.y, 3, 0, 2 * Math.PI);
   ctx.lineWidth = 4;
-  ctx.stroke();*/
+  ctx.stroke();
 }
 drawWireFrame(sampleRect)
 
