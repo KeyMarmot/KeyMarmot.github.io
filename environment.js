@@ -60,7 +60,7 @@ function drawWireFrame(mol) {
   ctx.fillStyle = 'grey';
   ctx.beginPath();
   ctx.arc(mol.p1.x, mol.p1.y, 3, 0, 2 * Math.PI);
-  ctx.stroke();
+  ctx.fill();
   
   ctx.fillStyle = mol.color;
   ctx.beginPath();       // Start a new path
