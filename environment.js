@@ -57,7 +57,7 @@ const camera = {
 
 function drawWireFrame(mol) {
   
-  ctx.fillStyle = mol.color;
+
   ctx.beginPath();       // Start a new path
   ctx.moveTo(mol.p1.x , mol.p1.y );    // Starting point 
   ctx.lineTo(mol.p2.x , mol.p2.y );  // Ending point
@@ -71,6 +71,7 @@ function drawWireFrame(mol) {
   ctx.arc(mol.p1.x, mol.p1.y, 3, 0, 2 * Math.PI);
   ctx.fill();
 
+  ctx.fillStyle = mol.color;
   ctx.fillRect (mol.p3.x, mol.p3.y, mol.p1.x-mol.p3.x , mol.p1.y-mol.p3.y);
 }
 
