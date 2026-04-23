@@ -56,11 +56,6 @@ const camera = {
 }
 
 function drawWireFrame(mol) {
-
-  ctx.fillStyle = 'grey';
-  ctx.beginPath();
-  ctx.arc(mol.p1.x, mol.p1.y, 3, 0, 2 * Math.PI);
-  ctx.fill();
   
   ctx.fillStyle = mol.color;
   ctx.beginPath();       // Start a new path
@@ -71,9 +66,14 @@ function drawWireFrame(mol) {
   ctx.lineTo(mol.p1.x , mol.p1.y );
   ctx.stroke();          // Render the line
 
-
+  ctx.fillStyle = 'grey';
+  ctx.beginPath();
+  ctx.arc(mol.p1.x, mol.p1.y, 3, 0, 2 * Math.PI);
+  ctx.fill();
 
   ctx.fillRect (mol.p3.x, mol.p3.y, mol.p1.x-mol.p3.x , mol.p1.y-mol.p3.y);
 }
 
 drawWireFrame(sampleRect)
+
+console.log("...script end")
