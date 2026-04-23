@@ -61,7 +61,8 @@ function drawWireFrame(mol) {
   ctx.moveTo(mol.p1.x * 50, mol.p1.y * 50);    // Starting point 
   ctx.lineTo(mol.p2.x * 50, mol.p2.y * 50);  // Ending point
   ctx.lineTo(mol.p3.x *50 , mol.p3.y * 50);
-  ctx.lineTo(mol.p6.x * 50, mol.p6.x * 50);
+  ctx.lineTo(mol.p6.x * 50, mol.p6.y * 50);
+  ctx.lineTo(mol.p1.x * 50, mol.p1.y * 50);
   ctx.stroke();          // Render the line
   ctx.fillRect (mol.x, mol.y, mol.w, mol.h);
 }
